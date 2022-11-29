@@ -4,6 +4,8 @@ main() => runApp(new PerguntaApp());
 
 class PerguntaApp extends StatelessWidget {
 
+  var perguntaSelecionada = 0;
+
   @override
   Widget build(BuildContext context){
     final List<String> perguntas = [
@@ -18,7 +20,7 @@ class PerguntaApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text(perguntas[0]),
+            Text(perguntas[perguntaSelecionada]),
             ElevatedButton(
                 child: Text('Resposta 1'),
               onPressed: responder,
@@ -37,6 +39,7 @@ class PerguntaApp extends StatelessWidget {
     );
   }
   void responder(){
+    perguntaSelecionada++;
     print('Pergunta respondida!');
   }
 }
