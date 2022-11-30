@@ -6,6 +6,11 @@ class Resultado extends StatelessWidget {
 
   Resultado(this.nota, this.quandoreiniciarQuestionario);
 
+  /// Give a message if the grade its:
+  /// - less then 8
+  /// - less then 12
+  /// - less then 16
+  /// - greater then 16
   String get fraseResultado {
     if (nota < 8) {
       return 'Parabéns';
