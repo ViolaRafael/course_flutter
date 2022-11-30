@@ -27,15 +27,15 @@ class Resultado extends StatelessWidget {
           child: Text(fraseResultado, style: TextStyle(fontSize: 28)),
         ),
         TextButton(
-          child: Text(
-            'Reiniciar?',
-            style: TextStyle(fontSize: 21),
-          ),
           style: TextButton.styleFrom(
             foregroundColor: Colors.white,
             backgroundColor: Colors.blue,
           ),
           onPressed: quandoreiniciarQuestionario,
+          child: const Text(
+            'Reiniciar?',
+            style: TextStyle(fontSize: 21),
+          ),
         )
       ],
     );
